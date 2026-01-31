@@ -12,6 +12,7 @@ const nav = [
   { href: '/cities', label: 'Cities' },
   { href: '/locations', label: 'Locations' },
   { href: '/products', label: 'Products' },
+  { href: '/journey-plans', label: 'Journey Plans', adminOnly: true },
 ];
 
 export function TopBar() {

@@ -124,11 +124,21 @@ export default function SupervisorsPage() {
                     <td className="py-3 text-black/70">{r.email}</td>
                     <td className="py-3 text-black/70">{r.city || '-'}</td>
                     <td className="py-3 text-black/70">{r.cnicNumber || '-'}</td>
+                    <td className="py-3">
+                      <div className="flex flex-wrap gap-2">
+                        <a
+                          href={`/journey-plans?supervisorId=${encodeURIComponent(r.id)}`}
+                          className="rounded-lg border border-black/10 bg-white px-3 py-1.5 text-sm font-semibold hover:bg-black/5"
+                        >
+                          Journey Plans
+                        </a>
+                      </div>
+                    </td>
                   </tr>
                 ))}
                 {!rows.length ? (
                   <tr>
-                    <td className="py-6 text-center text-black/60" colSpan={4}>
+                    <td className="py-6 text-center text-black/60" colSpan={5}>
                       No supervisors found.
                     </td>
                   </tr>
